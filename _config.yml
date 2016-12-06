@@ -6,8 +6,8 @@
 title: Hexo
 subtitle:
 description:
-author: John Doe
-language:
+author: Sandman
+language: zh-Hans
 timezone:
 
 # URL
@@ -63,9 +63,10 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/sandmanman/sandmanman.github.io.git
