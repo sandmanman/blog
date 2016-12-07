@@ -131,8 +131,10 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Twitter: twitter
-  Weibo: weibo
+  Lofter: lofter
+  Instagram: instagram
+  #Twitter: twitter
+  #Weibo: weibo
 
 
 # Sidebar Avatar
