@@ -10,7 +10,7 @@
 
 {% block content %}
 
-  <div id="posts" class="posts-expand">
+  <div id="posts" class="posts-expand posts-detail">
     {{ post_template.render(page) }}
 
     <div class="post-spread">
