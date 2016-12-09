@@ -36,6 +36,7 @@ menu:
   #about: /about
   archives: /archives
   tags: /tags
+  src: /src
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -53,6 +54,7 @@ menu_icons:
   categories: th
   schedule: calendar
   tags: tags
+  src: link
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
