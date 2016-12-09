@@ -218,3 +218,4 @@ node_modules/
 .deploy_git/
 .git/
 .github/
+db.json
