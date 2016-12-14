@@ -16,7 +16,8 @@ type: "src"
 - [SpinThatShit - CSSloader](https://github.com/MatejKustec/SpinThatShit)
 - [loaders.css](https://github.com/ConnorAtherton/loaders.css)
 - [css-loaders](https://github.com/lukehaas/css-loaders)
-- [csshake](https://github.com/elrumordelaluz/csshake)
+- [csspin - CSS Spinners and Loaders](https://github.com/webkul/csspin)
+- [csshake - Some CSS classes to move your DOM](https://github.com/elrumordelaluz/csshake)
 
 **Framework**
 - [bulma-A modern CSS framework based on Flexbox](https://github.com/jgthms/bulma)
@@ -41,6 +42,7 @@ type: "src"
 - [Font Awesome](http://fontawesome.io/)
 - [ionicons](http://ionicons.com/)
 - [Material icons](https://material.io/icons/)
+- [Iconfont - 阿里巴巴矢量图标库](http://www.iconfont.cn/plus)
 
 
 ***
@@ -52,6 +54,29 @@ type: "src"
 - [granim.js - 渐变动画/颜色/图片](https://github.com/sarcadass/granim.js)
 - [percircle-CSS percentage circle built with jQuery](https://github.com/toubou91/percircle)
 - [jQuery Timer: Start/Stop/Resume/Remove](https://github.com/walmik/timer.jquery)
-
 - [multi-select](http://loudev.com/)
+- [Fakecrop - Resize and crop bigger images and elements inside a container element](https://github.com/VuongN/jQuery-Fakecrop)
+
+
 ***
+
+
+## 微信小程序
+
+- [Wafer - 企业级微信小程序全栈方案](https://github.com/tencentyun/wafer)
+- [小相册](https://github.com/CFETeam/weapp-demo-album)
+- [地图定位](https://github.com/giscafer/wechat-weapp-mapdemo)
+- [豆瓣电影](https://github.com/zce/weapp-demo)
+- [购物车](https://github.com/SeptemberMaples/wechat-weapp-demo)
+- [番茄时钟](https://github.com/kraaas/timer)
+- [手机QQ](https://github.com/xiehui999/SmallAppForQQ)
+- [知乎日报](https://github.com/LiuCaiHe/wechat-app-sample)
+- [Apple Music](https://github.com/Sioxas/AppleMusic)
+
+***
+
+## JSON Data
+- [微票bannerList](http://json.bmbstack.com/bannerList)
+- [微票playingList](http://json.bmbstack.com/playingList)
+- [微票cinemaList](http://json.bmbstack.com/cinemaList)
+- [知乎日报](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
