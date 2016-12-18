@@ -25,6 +25,8 @@ type: "src"
 - [mui-Material Design CSS Framework](https://github.com/muicss/mui)
 - [Flexbox Patterns - Build awesome user interfaces with CSS flexbox](http://www.flexboxpatterns.com/home)
 - [Pintsize-Super flexbox](http://pintsize.io/examples)
+- [CoreUI-Free-Bootstrap-Admin-Template](https://github.com/mrholek/CoreUI-Free-Bootstrap-Admin-Template)
+- [AdminLTE Control Panel Template](https://almsaeedstudio.com/)
 
 **Components**
 - [emoji-css](https://github.com/afeld/emoji-css)
@@ -51,12 +53,21 @@ type: "src"
 
 - [clipboard.js - Copy to clipboard.No Flash](https://github.com/zenorocha/clipboard.js/)
 - [jquery.adaptive - backgrounds-提取图片颜色并作为背景色显示](https://github.com/briangonzalez/jquery.adaptive-backgrounds.js)
-- [granim.js - 渐变动画/颜色/图片](https://github.com/sarcadass/granim.js)
 - [percircle-CSS percentage circle built with jQuery](https://github.com/toubou91/percircle)
 - [jQuery Timer: Start/Stop/Resume/Remove](https://github.com/walmik/timer.jquery)
+- [timer-machine](https://github.com/brentburg/timer-machine)
+- [TimeCircles](https://github.com/wimbarelds/TimeCircles)
 - [multi-select](http://loudev.com/)
 - [Fakecrop - Resize and crop bigger images and elements inside a container element](https://github.com/VuongN/jQuery-Fakecrop)
+- [Basil.js - Unified localstorage, cookie and session storage JavaScript API](https://github.com/Wisembly/basil.js)
+- [localForage - localForage is a fast and simple storage library for JavaScript](https://github.com/localForage/localForage)
 
+
+## javaScript Animate
+- [granim.js - 渐变动画/颜色/图片](https://github.com/sarcadass/granim.js)
+- [anime.js](https://github.com/juliangarnier/anime)
+- [shape-shifter](https://github.com/kennethcachia/shape-shifter)
+- [led - canvas粒子文字插件](https://github.com/lixinliang/led)
 
 ***
 
