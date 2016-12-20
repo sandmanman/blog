@@ -59,6 +59,8 @@ type: "src"
 - [TimeCircles](https://github.com/wimbarelds/TimeCircles)
 - [multi-select](http://loudev.com/)
 - [Fakecrop - Resize and crop bigger images and elements inside a container element](https://github.com/VuongN/jQuery-Fakecrop)
+- [jQThumb - 按比例显示缩略图](https://github.com/pakcheong/jqthumb)
+- [Intro.js - Introductions for websites and features with a step-by-step guide](https://github.com/usablica/intro.js)
 - [Basil.js - Unified localstorage, cookie and session storage JavaScript API](https://github.com/Wisembly/basil.js)
 - [localForage - localForage is a fast and simple storage library for JavaScript](https://github.com/localForage/localForage)
 
