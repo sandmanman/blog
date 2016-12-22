@@ -20,6 +20,7 @@ type: "src"
 - [csshake - Some CSS classes to move your DOM](https://github.com/elrumordelaluz/csshake)
 
 **Framework**
+- [materialize - Materialize, a CSS Framework based on Material Design](https://github.com/dogfalo/materialize/)
 - [bulma-A modern CSS framework based on Flexbox](https://github.com/jgthms/bulma)
 - [bootflat-Flat UI KIT based on Bootstrap 3.3.0 CSS framework](http://bootflat.github.io/index.html)
 - [mui-Material Design CSS Framework](https://github.com/muicss/mui)
