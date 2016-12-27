@@ -7,6 +7,9 @@ type: "src"
 
 ## CSS
 
+**CSS grid**
+- [Flexbox Grid](http://flexboxgrid.com/)
+
 **CSS3 Animate**
 - [animate.css](https://github.com/daneden/animate.css)
 - [magic animations](http://www.minimamente.com/example/magic_animations/)
@@ -16,16 +19,18 @@ type: "src"
 - [SpinThatShit - CSSloader](https://github.com/MatejKustec/SpinThatShit)
 - [loaders.css](https://github.com/ConnorAtherton/loaders.css)
 - [css-loaders](https://github.com/lukehaas/css-loaders)
+- [SPINNERS - HTML and CSS "loading icon" animations](https://boguz.github.io/Spinners/)
 - [csspin - CSS Spinners and Loaders](https://github.com/webkul/csspin)
 - [csshake - Some CSS classes to move your DOM](https://github.com/elrumordelaluz/csshake)
 
 **Framework**
 - [materialize - Materialize, a CSS Framework based on Material Design](https://github.com/dogfalo/materialize/)
-- [bulma-A modern CSS framework based on Flexbox](https://github.com/jgthms/bulma)
+- [Bulma - A modern CSS framework based on Flexbox](https://github.com/jgthms/bulma)
 - [bootflat-Flat UI KIT based on Bootstrap 3.3.0 CSS framework](http://bootflat.github.io/index.html)
 - [mui-Material Design CSS Framework](https://github.com/muicss/mui)
 - [Flexbox Patterns - Build awesome user interfaces with CSS flexbox](http://www.flexboxpatterns.com/home)
 - [Pintsize-Super flexbox](http://pintsize.io/examples)
+- [picnic](https://github.com/picnicss/picnic)
 - [CoreUI-Free-Bootstrap-Admin-Template](https://github.com/mrholek/CoreUI-Free-Bootstrap-Admin-Template)
 - [AdminLTE Control Panel Template](https://almsaeedstudio.com/)
 
