@@ -1,5 +1,5 @@
 ---
-title: H5皮秒游戏，小项目总结
+title: H5皮秒游戏总结
 date: 2016-12-26 16:22:12
 categories: 项目总结
 ---
@@ -57,7 +57,7 @@ $('#elem').wScratchPad('enabled', <boolean>); // 是否开启 默认true
 
 ### 遇到的问题
 - 插件本身笔触是生硬的，去查了下Canvas的API把笔触修改为边缘羽化效果，`createRadialGradient`
-- 项目只需要点击擦除，禁止了触摸擦除，插件基础上增加了 `disabledMove: false` 选项
+- 项目只需要点击擦除，禁止了手指移动擦除，插件基础上增加了 `disabledMove: false` 选项
 
 **处理音频(audio)遇到的问题**
 音频资源是客户提供的网易云音乐的资源，根据网上的方法，找到了该资源的真实mp3地址，尽然2.4MB，真实很大啊，先不管大了。
