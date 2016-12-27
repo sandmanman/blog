@@ -80,8 +80,17 @@ type: "src"
 ***
 
 
-## 微信小程序
+## 移动端
+- [lib.flexible - 移动端自适应方案](https://github.com/amfe/lib-flexible)
+- [FastClick - 解决移动端浏览器 300 毫秒点击延迟问题](https://github.com/ftlabs/fastclick)
+- [noclickdelay.js - 取消移动设备上click事件的300毫秒延迟](https://github.com/baijunjie/noclickdelay.js)
 
+
+
+***
+
+
+## 微信小程序
 - [Wafer - 企业级微信小程序全栈方案](https://github.com/tencentyun/wafer)
 - [小相册](https://github.com/CFETeam/weapp-demo-album)
 - [地图定位](https://github.com/giscafer/wechat-weapp-mapdemo)
