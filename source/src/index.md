@@ -84,6 +84,7 @@ type: "src"
 - [lib.flexible - 移动端自适应方案](https://github.com/amfe/lib-flexible)
 - [FastClick - 解决移动端浏览器 300 毫秒点击延迟问题](https://github.com/ftlabs/fastclick)
 - [noclickdelay.js - 取消移动设备上click事件的300毫秒延迟](https://github.com/baijunjie/noclickdelay.js)
+- [AlloyTouch - 腾讯AlloyTeam移动Web触摸解决方案](https://github.com/AlloyTeam/AlloyTouch/blob/master/README_CN.md)
 
 
 
