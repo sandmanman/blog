@@ -76,6 +76,7 @@ type: "src"
 - [anime.js](https://github.com/juliangarnier/anime)
 - [shape-shifter](https://github.com/kennethcachia/shape-shifter)
 - [led - canvas粒子文字插件](https://github.com/lixinliang/led)
+- [ScrollReveal - 滚动显示动画](https://scrollrevealjs.org/)
 
 ***
 
