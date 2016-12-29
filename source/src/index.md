@@ -60,21 +60,22 @@ type: "src"
 ***
 
 ## javaScript
-- [device.js - 设备判断 iOS, Android | Portrait vs. Landscape | Tablet vs. Mobile](https://github.com/matthewhudson/device.js)
-- [clipboard.js - Copy to clipboard.No Flash](https://github.com/zenorocha/clipboard.js/)
+- [Device.js - 设备判断 iOS, Android | Portrait vs. Landscape | Tablet vs. Mobile](https://github.com/matthewhudson/device.js)
+- [Clipboard.js - Copy to clipboard.No Flash](https://github.com/zenorocha/clipboard.js/)
 - [jquery.adaptive - backgrounds-提取图片颜色并作为背景色显示](https://github.com/briangonzalez/jquery.adaptive-backgrounds.js)
-- [percircle-CSS percentage circle built with jQuery](https://github.com/toubou91/percircle)
+- [Percircle-CSS percentage circle built with jQuery](https://github.com/toubou91/percircle)
 - [jQuery Timer: Start/Stop/Resume/Remove](https://github.com/walmik/timer.jquery)
-- [timer-machine](https://github.com/brentburg/timer-machine)
+- [Timer-machine](https://github.com/brentburg/timer-machine)
 - [TimeCircles](https://github.com/wimbarelds/TimeCircles)
-- [multi-select](http://loudev.com/)
+- [Multi-select](http://loudev.com/)
 - [Fakecrop - Resize and crop bigger images and elements inside a container element](https://github.com/VuongN/jQuery-Fakecrop)
 - [jQThumb - 按比例显示缩略图](https://github.com/pakcheong/jqthumb)
 - [Intro.js - Introductions for websites and features with a step-by-step guide](https://github.com/usablica/intro.js)
 - [Basil.js - Unified localstorage, cookie and session storage JavaScript API](https://github.com/Wisembly/basil.js)
-- [localForage - localForage is a fast and simple storage library for JavaScript](https://github.com/localForage/localForage)
+- [LocalForage - localForage is a fast and simple storage library for JavaScript](https://github.com/localForage/localForage)
 - [GridList - Drag and drop library for two-dimensional, resizable and responsive lists](https://github.com/hootsuite/grid)
-- [notie - a clean and simple notification, input, and selection suite for javascript](https://github.com/jaredreich/notie)
+- [Notie - a clean and simple notification, input, and selection suite for javascript](https://github.com/jaredreich/notie)
+- [Slick - 轮播支持PC和Mobile](https://github.com/kenwheeler/slick/)
 
 
 ## javaScript Animate
