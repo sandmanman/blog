@@ -7,8 +7,13 @@ type: "src"
 
 ## CSS
 
+- [normalize.css](https://github.com/necolas/normalize.css)
+
 **CSS grid**
 - [Flexbox Grid](http://flexboxgrid.com/)
+- [neat - A lightweight semantic grid framework built with Sass](https://github.com/thoughtbot/neat)
+- [Gridforms - 网格表单](https://github.com/kumailht/gridforms/)
+- [TOAST - Insane, no-nonsense CSS grid](http://daneden.github.io/Toast/)
 
 **CSS3 Animate**
 - [animate.css](https://github.com/daneden/animate.css)
@@ -41,7 +46,6 @@ type: "src"
 - [simple-toggle-switch](http://www.cssflow.com/snippets/simple-toggle-switch/demo)
 
 **Utils**
-- [Preboot-LESS mixins](http://getpreboot.com/)
 - [devices.css - CSS (Mostly) Flat Mobile Devices](https://github.com/marvelapp/devices.css)
 
 ***
@@ -56,7 +60,7 @@ type: "src"
 ***
 
 ## javaScript
-
+- [device.js - 设备判断 iOS, Android | Portrait vs. Landscape | Tablet vs. Mobile](https://github.com/matthewhudson/device.js)
 - [clipboard.js - Copy to clipboard.No Flash](https://github.com/zenorocha/clipboard.js/)
 - [jquery.adaptive - backgrounds-提取图片颜色并作为背景色显示](https://github.com/briangonzalez/jquery.adaptive-backgrounds.js)
 - [percircle-CSS percentage circle built with jQuery](https://github.com/toubou91/percircle)
@@ -69,6 +73,8 @@ type: "src"
 - [Intro.js - Introductions for websites and features with a step-by-step guide](https://github.com/usablica/intro.js)
 - [Basil.js - Unified localstorage, cookie and session storage JavaScript API](https://github.com/Wisembly/basil.js)
 - [localForage - localForage is a fast and simple storage library for JavaScript](https://github.com/localForage/localForage)
+- [GridList - Drag and drop library for two-dimensional, resizable and responsive lists](https://github.com/hootsuite/grid)
+- [notie - a clean and simple notification, input, and selection suite for javascript](https://github.com/jaredreich/notie)
 
 
 ## javaScript Animate
