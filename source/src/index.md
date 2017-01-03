@@ -110,6 +110,7 @@ type: "src"
 - [手机QQ](https://github.com/xiehui999/SmallAppForQQ)
 - [知乎日报](https://github.com/LiuCaiHe/wechat-app-sample)
 - [Apple Music](https://github.com/Sioxas/AppleMusic)
+- [We重邮 - 微信小程序](https://github.com/lanshan-studio/wecqupt)
 
 ***
 
