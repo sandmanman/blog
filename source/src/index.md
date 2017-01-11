@@ -74,6 +74,7 @@ type: "src"
 - [Intro.js - Introductions for websites and features with a step-by-step guide](https://github.com/usablica/intro.js)
 - [Basil.js - Unified localstorage, cookie and session storage JavaScript API](https://github.com/Wisembly/basil.js)
 - [LocalForage - localForage is a fast and simple storage library for JavaScript](https://github.com/localForage/localForage)
+- [WebStorageCache - 对localStorage 和sessionStorage 进行了扩展，添加了超时时间，序列化方法](https://github.com/WQTeam/web-storage-cache)
 - [GridList - Drag and drop library for two-dimensional, resizable and responsive lists](https://github.com/hootsuite/grid)
 - [Notie - a clean and simple notification, input, and selection suite for javascript](https://github.com/jaredreich/notie)
 - [Slick - 轮播支持PC和Mobile](https://github.com/kenwheeler/slick/)
