@@ -74,6 +74,14 @@ $('#elem').wScratchPad('enabled', <boolean>); // 是否开启 默认true
 有空我要先Demo下 `currentTime` 是个什么情况，及一些网易云音乐Web版是怎么做的。
 
 
+### CSS3动画性能
+发现使用 `box-shadow` 来做闪烁的效果，几个同时闪烁，会有明显的卡顿现象（小米4C），如果 用边缘羽化过的图片 来替换box-shadow的话，卡顿现象消失了。
+这里有两篇关于CSS3动画性能的文章：
+
+- [高性能 CSS3 动画](https://www.qianduan.net/high-performance-css3-animations/)
+- [CSS动画之硬件加速](https://www.w3cplus.com/css3/introduction-to-hardware-acceleration-css-animations.html)
+
+
 ### 还可以更好的地方
 - 图片资源的预加载
 - 音频资源的预加载
