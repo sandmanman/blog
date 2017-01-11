@@ -66,7 +66,6 @@ type: "src"
 - [jquery.adaptive - backgrounds-提取图片颜色并作为背景色显示](https://github.com/briangonzalez/jquery.adaptive-backgrounds.js)
 - [Percircle-CSS percentage circle built with jQuery](https://github.com/toubou91/percircle)
 - [jQuery Timer: Start/Stop/Resume/Remove](https://github.com/walmik/timer.jquery)
-- [Timer-machine](https://github.com/brentburg/timer-machine)
 - [TimeCircles](https://github.com/wimbarelds/TimeCircles)
 - [Multi-select](http://loudev.com/)
 - [Fakecrop - Resize and crop bigger images and elements inside a container element](https://github.com/VuongN/jQuery-Fakecrop)
