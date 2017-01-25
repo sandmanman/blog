@@ -15,7 +15,10 @@ type: "src"
 - [Gridforms - 网格表单](https://github.com/kumailht/gridforms/)
 - [TOAST - Insane, no-nonsense CSS grid](http://daneden.github.io/Toast/)
 
-**CSS3 Animate**
+**Animate**
+- [css3 tools - css3动画工具](https://isux.tencent.com/css3/tools.html)
+- [Effeckt.css - 动画库:modal,button,list,tab...](https://github.com/h5bp/Effeckt.css)
+- [Tridiv - Creating 3D shapes in CSS ](http://tridiv.com/)
 - [animate.css](https://github.com/daneden/animate.css)
 - [magic animations](http://www.minimamente.com/example/magic_animations/)
 - [Effeckt](http://h5bp.github.io/Effeckt.css/)
@@ -27,6 +30,11 @@ type: "src"
 - [SPINNERS - HTML and CSS "loading icon" animations](https://boguz.github.io/Spinners/)
 - [csspin - CSS Spinners and Loaders](https://github.com/webkul/csspin)
 - [csshake - Some CSS classes to move your DOM](https://github.com/elrumordelaluz/csshake)
+- [Rocket - Rocket create an animation from two items via jQuery](https://github.com/miniMAC/rocket)
+- [Animate Plus - CSS and SVG animation library](https://github.com/bendc/animateplus)
+- [textillate.js - CSS3textanimations](http://textillate.js.org/)
+- [mojs - 图形运动动画](https://github.com/legomushroom/mojs)
+- [css3 cubic-bezier - 在线生成](http://cubic-bezier.com/)
 
 **Framework**
 - [Pure - A set of small, responsive CSS modules](https://github.com/yahoo/pure)
@@ -110,6 +118,7 @@ type: "src"
 - [手机QQ](https://github.com/xiehui999/SmallAppForQQ)
 - [知乎日报](https://github.com/LiuCaiHe/wechat-app-sample)
 - [Apple Music](https://github.com/Sioxas/AppleMusic)
+- [wechat-app-music](https://github.com/eyasliu/wechat-app-music)
 - [We重邮 - 微信小程序](https://github.com/lanshan-studio/wecqupt)
 
 ***
