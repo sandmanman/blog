@@ -16,7 +16,6 @@ type: "src"
 - [TOAST - Insane, no-nonsense CSS grid](http://daneden.github.io/Toast/)
 
 **Animate**
-- [css3 tools - css3动画工具](https://isux.tencent.com/css3/tools.html)
 - [Effeckt.css - 动画库:modal,button,list,tab...](https://github.com/h5bp/Effeckt.css)
 - [Tridiv - Creating 3D shapes in CSS ](http://tridiv.com/)
 - [animate.css](https://github.com/daneden/animate.css)
@@ -34,7 +33,6 @@ type: "src"
 - [Animate Plus - CSS and SVG animation library](https://github.com/bendc/animateplus)
 - [textillate.js - CSS3textanimations](http://textillate.js.org/)
 - [mojs - 图形运动动画](https://github.com/legomushroom/mojs)
-- [css3 cubic-bezier - 在线生成](http://cubic-bezier.com/)
 
 **Framework**
 - [Pure - A set of small, responsive CSS modules](https://github.com/yahoo/pure)
@@ -128,3 +126,11 @@ type: "src"
 - [微票playingList](http://json.bmbstack.com/playingList)
 - [微票cinemaList](http://json.bmbstack.com/cinemaList)
 - [知乎日报](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
+
+
+***
+## 开发工具
+- [css3 cubic-bezier - 在线生成](http://cubic-bezier.com/)
+- [css3 tools - css3动画工具](https://isux.tencent.com/css3/tools.html)
+- [CSS3 Tool](http://westciv.com/tools/gradients/)
+- [spy-debugger - 微信调试，各种WebView样式调试、手机浏览器的页面真机调试](https://github.com/wuchangming/spy-debugger)
