@@ -122,6 +122,18 @@ type: "src"
 
 ***
 
+## Vue.js
+- [Vue.js 2.0中文文档](https://vuefe.cn/v2/guide/)
+- [Vuex - 状态管理模式](https://vuex.vuejs.org/zh-cn/intro.html)
+- [vue-router 2 - 路由](https://router.vuejs.org/zh-cn/)
+- [vue-amap - 基于Vue2.0和高德地图的地图组件](https://github.com/ElemeFE/vue-amap)
+- [mint-ui - Mobile UI elements for Vue.js](https://github.com/ElemeFE/mint-ui)
+- [element - A Vue.js 2.0 UI Toolkit for Web](https://github.com/ElemeFE/element)
+
+
+***
+
+
 ## JSON Data
 - [微票bannerList](http://json.bmbstack.com/bannerList)
 - [微票playingList](http://json.bmbstack.com/playingList)
@@ -130,9 +142,11 @@ type: "src"
 
 
 ***
+
 ## 效率工具
 - [bourbon - A Lightweight Sass Tool Set](https://github.com/thoughtbot/bourbon)
 - [css3 cubic-bezier - 在线生成](http://cubic-bezier.com/)
 - [css3 tools - css3动画工具](https://isux.tencent.com/css3/tools.html)
 - [CSS3 Tool](http://westciv.com/tools/gradients/)
 - [spy-debugger - 微信调试，各种WebView样式调试、手机浏览器的页面真机调试](https://github.com/wuchangming/spy-debugger)
+- [cooking - 基于 webapck 但更友好的配置项、易用的扩展配置机制](http://elemefe.github.io/cooking/)
