@@ -129,6 +129,7 @@ type: "src"
 - [vue-amap - 基于Vue2.0和高德地图的地图组件](https://github.com/ElemeFE/vue-amap)
 - [mint-ui - Mobile UI elements for Vue.js](https://github.com/ElemeFE/mint-ui)
 - [element - A Vue.js 2.0 UI Toolkit for Web](https://github.com/ElemeFE/element)
+- [jackblog - vue 版个人博客系统](https://github.com/jackhutu/jackblog-vue)
 
 
 ***
