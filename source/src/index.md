@@ -125,11 +125,12 @@ type: "src"
 ## Vue.js
 - [Vue.js 2.0中文文档](https://vuefe.cn/v2/guide/)
 - [Vuex - 状态管理模式](https://vuex.vuejs.org/zh-cn/intro.html)
-- [vue-router 2 - 路由](https://router.vuejs.org/zh-cn/)
+- [vue-router2 - 路由](https://router.vuejs.org/zh-cn/)
 - [vue-amap - 基于Vue2.0和高德地图的地图组件](https://github.com/ElemeFE/vue-amap)
 - [mint-ui - Mobile UI elements for Vue.js](https://github.com/ElemeFE/mint-ui)
 - [element - A Vue.js 2.0 UI Toolkit for Web](https://github.com/ElemeFE/element)
 - [jackblog - vue 版个人博客系统](https://github.com/jackhutu/jackblog-vue)
+- [vux - 基于WeUI和Vue(2.x)开发的移动端UI组件库，主要服务于微信页面](https://github.com/airyland/vux)
 
 
 ***
