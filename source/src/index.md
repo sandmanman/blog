@@ -131,6 +131,7 @@ type: "src"
 - [element - A Vue.js 2.0 UI Toolkit for Web](https://github.com/ElemeFE/element)
 - [jackblog - vue 版个人博客系统](https://github.com/jackhutu/jackblog-vue)
 - [vux - 基于WeUI和Vue(2.x)开发的移动端UI组件库，主要服务于微信页面](https://github.com/airyland/vux)
+- [VueStar - 点赞动画组件](https://github.com/OYsun/VueStar)
 
 
 ***
