@@ -10,7 +10,6 @@ type: "src"
 - [normalize.css](https://github.com/necolas/normalize.css)
 
 **CSS grid**
-- [Flexbox Grid](http://flexboxgrid.com/)
 - [neat - A lightweight semantic grid framework built with Sass](https://github.com/thoughtbot/neat)
 - [Gridforms - 网格表单](https://github.com/kumailht/gridforms/)
 - [TOAST - Insane, no-nonsense CSS grid](http://daneden.github.io/Toast/)
@@ -46,6 +45,16 @@ type: "src"
 - [CoreUI-Free-Bootstrap-Admin-Template](https://github.com/mrholek/CoreUI-Free-Bootstrap-Admin-Template)
 - [AdminLTE Control Panel Template](https://almsaeedstudio.com/)
 - [Refills - Components and patterns built with Bourbon and Neat](http://refills.bourbon.io/)
+
+
+**Flexbox**
+- [Flexbox Grid - flexbox布局框架](http://flexboxgrid.com/)
+- [Flexbox Patterns](http://www.flexboxpatterns.com/home)
+- [solved-by-flexbox](https://github.com/philipwalton/solved-by-flexbox)
+- [Flexibility - 各属性在线演示](https://jonathantneal.github.io/flexibility/)
+- [flexplorer - 布局](http://bennettfeely.com/flexplorer/)
+- [Properties for the flex container - 各种示例](http://codepen.io/enxaneta/full/adLPwv/)
+
 
 **Components**
 - [emoji-css](https://github.com/afeld/emoji-css)
