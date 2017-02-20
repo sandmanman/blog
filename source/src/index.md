@@ -169,6 +169,7 @@ type: "src"
 ## 前端构建脚手架
 - [webpack-seed - 基于webpack搭建纯静态页面型前端工程解决方案模板](https://github.com/chemdemo/webpack-seed)
 - [Webpack-Vue-MultiplePage - 在多页面项目下使用 Webpack + Vue](https://github.com/cnu4/Webpack-Vue-MultiplePage)
+- [jarvan4dev/vue-multi-page - 基于vue-cli脚手架修改而成的多页面(非SPA)项目脚手架](https://github.com/jarvan4dev/vue-multi-page)
 - [cooking-demo/multiple-pages-vue - Vue 2 + webpack 2 多页面例子](https://github.com/cooking-demo/multiple-pages-vue)
 - [cooking-demo/simple - vue2+webpack2单页面](https://github.com/cooking-demo/simple)
 - [fis3-base - 基于fis3的纯前端解决方案](https://github.com/yanhaijing/fis3-base)
