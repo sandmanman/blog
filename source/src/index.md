@@ -142,6 +142,7 @@ type: "src"
 - [vux - 基于WeUI和Vue(2.x)开发的移动端UI组件库，主要服务于微信页面](https://github.com/airyland/vux)
 - [VueStar - 点赞动画组件](https://github.com/OYsun/VueStar)
 - [NeteaseCloudWebApp - 网易云音乐](https://github.com/javaSwing/NeteaseCloudWebApp)
+- [vue-ssr - vue服务端渲染模板](https://github.com/ccforward/vue-ssr)
 
 
 ***
