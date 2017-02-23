@@ -95,12 +95,13 @@ type: "src"
 - [Slick - 轮播支持PC和Mobile](https://github.com/kenwheeler/slick/)
 
 
-## javaScript Animate
+## Animate javaScript/CSS3
 - [granim.js - 渐变动画/颜色/图片](https://github.com/sarcadass/granim.js)
 - [anime.js](https://github.com/juliangarnier/anime)
 - [shape-shifter](https://github.com/kennethcachia/shape-shifter)
 - [led - canvas粒子文字插件](https://github.com/lixinliang/led)
 - [ScrollReveal - 滚动显示动画](https://scrollrevealjs.org/)
+- [bounce.js](https://github.com/tictail/bounce.js)
 
 ***
 
@@ -110,6 +111,7 @@ type: "src"
 - [FastClick - 解决移动端浏览器 300 毫秒点击延迟问题](https://github.com/ftlabs/fastclick)
 - [noclickdelay.js - 取消移动设备上click事件的300毫秒延迟](https://github.com/baijunjie/noclickdelay.js)
 - [AlloyTouch - 腾讯AlloyTeam移动Web触摸解决方案](https://github.com/AlloyTeam/AlloyTouch/blob/master/README_CN.md)
+- [AlloyFinger - 多点触摸手势库](https://github.com/AlloyTeam/AlloyFinger)
 
 
 
@@ -143,6 +145,7 @@ type: "src"
 - [VueStar - 点赞动画组件](https://github.com/OYsun/VueStar)
 - [NeteaseCloudWebApp - 网易云音乐](https://github.com/javaSwing/NeteaseCloudWebApp)
 - [vue-ssr - vue服务端渲染模板](https://github.com/ccforward/vue-ssr)
+- [vue2-elm](https://github.com/bailicangdu/vue2-elm)
 
 
 ***
