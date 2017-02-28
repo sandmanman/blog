@@ -130,6 +130,7 @@ type: "src"
 - [Apple Music](https://github.com/Sioxas/AppleMusic)
 - [wechat-app-music](https://github.com/eyasliu/wechat-app-music)
 - [We重邮 - 微信小程序](https://github.com/lanshan-studio/wecqupt)
+- [wxapp-cli - 微信小程序脚手架](https://github.com/MeCKodo/wxapp-cli)
 
 ***
 
