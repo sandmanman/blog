@@ -1,6 +1,7 @@
 ---
 title: 'HTML5 audio 跨页面持续播放'
 date: 2017-01-17 11:48:40
+categories: 项目总结
 tags: ['audio','localStorage']
 ---
 

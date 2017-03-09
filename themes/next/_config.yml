@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "HTML5,CSS3,前端开发,javascript,ES6"
+keywords: "HTML5,CSS3,前端开发,javascript,ES6,Vue"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -206,7 +206,7 @@ excerpt_description: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 300
+  length: 161
 
 # Post meta display settings
 post_meta:
