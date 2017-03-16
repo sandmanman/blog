@@ -142,9 +142,9 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-  Twitter: twitter
-  Zhihu: zhihu
+  GitHub: https://github.com/sandmanman
+  知乎: https://www.zhihu.com/people/designidea
+
 
 
 # Sidebar Avatar
@@ -241,7 +241,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night eighties
 
 
 # ---------------------------------------------------------------

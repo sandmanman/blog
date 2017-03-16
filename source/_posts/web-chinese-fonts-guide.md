@@ -13,7 +13,7 @@ tags: font
 
 下面的文字也详细的介绍了 web 中文字体的设置
 
-> 转载：[Web 中文字体应用指南](http://ruby-china.org/topics/14005)
+> 作者：[nightire](http://ruby-china.org/nightire) [Web 中文字体应用指南](http://ruby-china.org/topics/14005)
 
 ------
 
