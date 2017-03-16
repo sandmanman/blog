@@ -1,5 +1,5 @@
 ---
-title: [转载]Web 中文字体应用指南
+title: '[转载]Web 中文字体应用指南'
 date: 2017-03-16 14:04:36
 categories: 项目总结
 tags: font
