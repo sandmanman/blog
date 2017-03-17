@@ -32,6 +32,7 @@ type: "src"
 - [Animate Plus - CSS and SVG animation library](https://github.com/bendc/animateplus)
 - [textillate.js - CSS3 text animations](http://textillate.js.org/)
 - [mojs - 图形运动动画](https://github.com/legomushroom/mojs)
+- [缓动函数速查表](http://easings.net/zh-cn#)
 
 **Framework**
 - [Pure - A set of small, responsive CSS modules](https://github.com/yahoo/pure)
