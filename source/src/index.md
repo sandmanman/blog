@@ -180,3 +180,4 @@ type: "src"
 - [cooking-demo/simple - vue2+webpack2单页面](https://github.com/cooking-demo/simple)
 - [fis3-base - 基于fis3的纯前端解决方案](https://github.com/yanhaijing/fis3-base)
 - [cooking - 基于 webapck 但更友好的配置项、易用的扩展配置机制](http://elemefe.github.io/cooking/)
+- [gulp-requirejs-boilerplate - 基于gulp+requirejs+less的多应用构建方案](https://github.com/xiongwilee/gulp-requirejs-boilerplate)
