@@ -219,5 +219,4 @@ node_modules/
 .git/
 .github/
 db.json
-db.json
-db.json
+.vscode/
