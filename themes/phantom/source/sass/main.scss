@@ -3,7 +3,15 @@
 @import 'libs/mixins';
 @import 'libs/skel';
 @import 'font-awesome.min.css';
-@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900');
+@import url('//lib.wuedc.com/cdn/googlefonts/css/SourceSansPro.css?family=Source+Sans+Pro');
+
+// @font-face {font-family: 'webfont';
+//   src: url('//at.alicdn.com/t/99ktg06n0wl8fr.eot'); /* IE9*/
+//   src: url('//at.alicdn.com/t/99ktg06n0wl8fr.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//   url('//at.alicdn.com/t/99ktg06n0wl8fr.woff') format('woff'), /* chrome、firefox */
+//   url('//at.alicdn.com/t/99ktg06n0wl8fr.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+//   url('//at.alicdn.com/t/99ktg06n0wl8fr.svg#NotoSansHans-DemiLight') format('svg'); /* iOS 4.1- */
+// }
 
 /*
 	Phantom by HTML5 UP

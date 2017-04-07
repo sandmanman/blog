@@ -1,0 +1,59 @@
+# Header
+menu:
+  home: /
+  #categories: /categories
+  #about: /about
+  archives: /archives
+  #tags: /tags
+  src: /src
+  #sitemap: /sitemap.xml
+  #commonweal: /404.html
+
+# Logo Image Source
+logo_src: /uploads/logo.png
+
+# Theme Main Subtitle
+subtitle_main: 
+
+# Theme Secondary subtitle
+susbtitle_secondary: 代码搬运工
+
+# Footer About Section
+# about_footer: This theme was initially developed by <a href="http://html5up.net" target="_blank">HTML5 UP</a>. It is adapted for Hexo by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a>.<br />The source code is available on <a href="https://github.com/klugjo/hexo-theme-phantom" target="_blank">GitHub</a>.
+
+# Default post title
+default_post_title: Untitled
+
+# Default post cover index page (Recommended)
+default_cover_index: "/uploads/pic01.jpg"
+
+# Default post cover index page (Optional)
+default_cover_detail: 
+
+# Show Dates for posts and pages
+show_dates: true
+
+# Comments. Choose one by filling up the information
+# comments:
+#   # Disqus comments
+#   disqus_shortname: klugjo
+#   # Facebook comments
+#   facebook:
+#     appid:
+#     comment_count: 5
+#     comment_colorscheme: light
+
+# Google Analytics Tracking ID
+google_analytics:
+
+# Social Accounts
+# twitter_url: https://twitter.com/?lang=en
+# facebook_url: https://www.facebook.com/
+instagram_url: https://www.instagram.com/sandmanman/
+dribble_url: https://dribbble.com/designidea/
+github_url: https://github.com/sandmanman/
+# googleplus_url: https://plus.google.com/
+# behance_url: https://www.behance.net/
+# fivehundredpx_url: https://500px.com/
+email_url: mailto:sandman.csser@foxmail.com
+# rss_url: \#
