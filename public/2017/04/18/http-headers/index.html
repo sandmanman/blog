@@ -1,0 +1,679 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next muse" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="http," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="转载：HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头
+
+HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：Content-Type: text/html 。通过HTTP消息头，可以使服务器或客户端了解对方所使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头">
+<meta property="og:url" content="http://www.bestcsser.cc/2017/04/18/http-headers/index.html">
+<meta property="og:site_name" content="Code.Design.Coffee">
+<meta property="og:description" content="转载：HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头
+
+HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：Content-Type: text/html 。通过HTTP消息头，可以使服务器或客户端了解对方所使用">
+<meta property="og:updated_time" content="2017-04-18T03:24:52.055Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头">
+<meta name="twitter:description" content="转载：HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头
+
+HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：Content-Type: text/html 。通过HTTP消息头，可以使服务器或客户端了解对方所使用">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.bestcsser.cc/2017/04/18/http-headers/"/>
+
+
+
+
+
+  <title> [转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头 | Code.Design.Coffee </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+    <div class="site-meta-headline">
+      <a>
+        <img class="custom-logo-image" src="/uploads/logo.png"
+             alt="Code.Design.Coffee"/>
+      </a>
+    </div>
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Code.Design.Coffee</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">代码搬运工</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-src">
+          <a href="/src" rel="section">
+            
+            资源
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.bestcsser.cc/2017/04/18/http-headers/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Qiming">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Code.Design.Coffee">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Code.Design.Coffee" src="/uploads/logo.png">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                [转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-18T11:16:55+08:00">
+                2017-04-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>转载：<a href="https://itbilu.com/other/relate/E1T0q4EIe.html" target="_blank" rel="external">HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头</a></p>
+</blockquote>
+<p>HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：<code>Content-Type: text/html</code> 。通过HTTP消息头，可以使服务器或客户端了解对方所使用的协议版本、内容类型、编码方式等。</p>
+<h2 id="HTTP消息头分类"><a href="#HTTP消息头分类" class="headerlink" title="HTTP消息头分类"></a>HTTP消息头分类</h2><p>在HTTP消息头中，有些是客户端特有的，有些是服务端所特有的，也有些是消息头是通用的。按HTTP消息头出现的上下文环境，有以下分类：</p>
+<h3 id="通用头"><a href="#通用头" class="headerlink" title="通用头"></a>通用头</h3><p>HTTP消息头中，有些既适用于客户端的请求头，也适用于服务端的响应头，与HTTP消息体内最终传输的数据是无关的，只适用于要发送的消息。这些消息头由于HTTP协议版本的不同可能会有所区别，在 <code>HTTP/1.1</code> 中，这些消息头有：<code>Cache-Control:、Connection:、Date:、 Pragma:、Trailer:、Transfer-Encoding:、Upgrade:、 Via:、Warning:</code> 。</p>
+<h3 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h3><p>HTTP 请求头为所请求的资源或请求本身，提供了更为精确的描述信息。其中有些缓存相关头描述了缓存信息，这些头会改变GET请求时获取资源的方式，如：<code>If-Modified-Since</code> 。有些消息头描述了用户偏好，如： <code>Accept-Language</code> 和 <code>Accept-Charset</code> 表示客户端所使用语言及编码方式、<code>User-Agent</code> 表示客户端的代理方式。</p>
+<p>新增加的请求头不能在旧的HTTP版本中使用，但是，如果服务器和客户端都能对相关头进行处理，就可以在请求中使用。在这种情况下，客户端不应该假定服务器有对相关头的处理能力。未知的请求头被处理为实体头。</p>
+<h3 id="响应头"><a href="#响应头" class="headerlink" title="响应头"></a>响应头</h3><p>HTTP 响应头为响应消息提供了更多信息。如，关于资源位置的描述 <code>Location</code> :，关于务器本身的描述使用 <code>Server</code> :</p>
+<p>新增加的响应头不能在旧的HTTP版本中使用，但是，如果服务器和客户端都能对相关头进行处理，就可以在响应中使用。在这种情况下，服务器不应该假定客户端有对相关头的处理能力。未知的响应头被处理为实体头。</p>
+<h3 id="实体头"><a href="#实体头" class="headerlink" title="实体头"></a>实体头</h3><p>HTTP 实体头提供了关于消息体的描述。如，消息体的长度 <code>Content-Length</code> :，消息体的MIME类型 <code>Content-Type</code> :。新的实体头可以旧HTTP版本中使用。</p>
+<p>HTTP消息头也可以按缓存与百缓存的处理方式分分类：</p>
+<h3 id="端到端（End-To-End）头"><a href="#端到端（End-To-End）头" class="headerlink" title="端到端（End-To-End）头"></a>端到端（End-To-End）头</h3><p><code>End-To-End</code> 头信息必须发送到消息的最终接收人，即：接收请求消息的服务器或接收响应消息的客户端。这些头信息意味着中间代理必须重发未修改的内容，也必须存储缓存。</p>
+<p><code>End-To-End</code> 头在一个路由器连接的两种物理网络中使用，即：<code>OSI</code> 的应用层和运输层。</p>
+<h3 id="逐跳（Hop-By-Hop）头"><a href="#逐跳（Hop-By-Hop）头" class="headerlink" title="逐跳（Hop-By-Hop）头"></a>逐跳（Hop-By-Hop）头</h3><p><code>Hop-By-Hop</code> 头被单一的传输层连接使用，<code>Hop-By-Hop</code> 头标识传输内容不得通过代理或缓存转发。这些头信息有：<code>Connection:、Keep-Alive:、Proxy-Authenticate:、Proxy-Authorization:、 TE:、Trailers:、Transfer-Encoding:、Upgrade:</code> 。注意，只有 <code>Hop-By-Hop</code> 头可能会设置使用 <code>Connection</code> : 通用头。</p>
+<h2 id="一些有用的请求头"><a href="#一些有用的请求头" class="headerlink" title="一些有用的请求头"></a>一些有用的请求头</h2><p>众多的HTTP请求头中，有几个是特别有用且应当正确设置的。如果你要创建HTTP请求，如，创建 <code>XMLHttpRequest</code> 或一个延时写入并通过XPCOM发送自定义的HTTP请求时，这时确保正确写入请求头就非常重要，进行这些操作时，用户使用浏览器一般自动写入请求头。</p>
+<h3 id="控制所访问资源的语言"><a href="#控制所访问资源的语言" class="headerlink" title="控制所访问资源的语言"></a>控制所访问资源的语言</h3><p>大多数用户所使用的浏览器客户端，如：Firefox，都允许用户设置所偏好的语言，设置后浏览器会在发送请求时添加一个 <code>Accept-Language</code> : 头信息。而服务器，在收到HTTP请求时，也可以根据这个头信息返回对应语言的资源。</p>
+<h3 id="有条件GET请求"><a href="#有条件GET请求" class="headerlink" title="有条件GET请求"></a>有条件GET请求</h3><p>缓存是提高网站访问速度的重要方式，当使用 <code>XMLHttpRequest</code> 进行部分页面数据的刷新时，使用 <code>If-Modified-Since</code> ：头信息会告诉服务器，访问更新过的内容，可以有效的提高访问效率。</p>
+<h2 id="一些有用的响应头"><a href="#一些有用的响应头" class="headerlink" title="一些有用的响应头"></a>一些有用的响应头</h2><p>正确的配置网站服务器，是保证网站性能和安全的关键。在众多的HTTP响应头中，有几个响应头是比较重要性且应当配置在服务器中。</p>
+<h3 id="框架（frame）控制"><a href="#框架（frame）控制" class="headerlink" title="框架（frame）控制"></a>框架（frame）控制</h3><p>几个跨站脚本（XSS）攻击，就是利用第三方框架（frame或iframe）。现代浏览器已经支持 <code>CSPframe-ancestors</code> 指令，在服务器端将其设置为”none”，可以有效访止浏览器在框架内显示该资源，使用它的关键资源（如：表单数据或关键信息）可以有效减少 <code>XSS</code> 攻击风险。注意，这个响应头并不是缓解XSS风险的唯一途径，也可通过一些内容安全策略实现。</p>
+<h3 id="数据压缩"><a href="#数据压缩" class="headerlink" title="数据压缩"></a>数据压缩</h3><p>最大限度地减少传输的数据量，可以有效加速了网页的显示。虽然可以通Gulp等工具，将静态文件数据压缩。但如果要压缩传输数据，那么必须在Web服务器级别进行相关配置。设置后，客户端会发送一个 <code>Accept-Encoding</code> :头，告诉服务器所接受的编码方式；而服务器也会响应一个 <code>Content-Encoding</code> :头，告诉客户端所使用的压缩方式。</p>
+<p>注：<code>Nginx</code> 服务器可以通过配置 <code>Gzip</code> 实现数据压缩。</p>
+<h3 id="缓存控制"><a href="#缓存控制" class="headerlink" title="缓存控制"></a>缓存控制</h3><p>HTTP缓存是提高网站访问速度另一种有效方式，它可防止同一未修改资源被多次访问。正确的配置服务器的响应头，可以使用户代理（浏览中器）充分缓存数据。</p>
+<p>配置缓存时，需要设置以下项：</p>
+<p>任何静态资源都应该提供了一个 <code>Expires</code> :响应头。这样，资源可以用户代理达到它自身限制前（如：达到缓存大小限制），充分的缓存数据。<br>任何动态资源都应该提供了一个 <code>Cache-control</code> :响应头。理论上讲，所有安全的HTTP方法(GET、HEAD)甚至幂等方法(DELETE、PUT)，都可以配置缓存，但在实际使用中会有一些问题。</p>
+<h3 id="设置MIME类型"><a href="#设置MIME类型" class="headerlink" title="设置MIME类型"></a>设置MIME类型</h3><p><code>MIME</code> 类型响应头 <code>Content-type</code> 会告诉客户端传输文档的类型，扩展名在文档的网络传中已经失去意义。正确配置服务器此项设置，对文件传输非常重要，用户代理客户端经常通过MIME类型判断文档的打开方式或获取资源后的默认动作。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/http/" rel="tag"># http</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/18/http-request-methods/" rel="next" title="[转载]HTTP请求方法：GET、HEAD、POST、PUT、DELETE、CONNECT、OPTIONS、TRACE">
+                <i class="fa fa-chevron-left"></i> [转载]HTTP请求方法：GET、HEAD、POST、PUT、DELETE、CONNECT、OPTIONS、TRACE
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="Qiming" />
+          <p class="site-author-name" itemprop="name">Qiming</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP消息头分类"><span class="nav-number">1.</span> <span class="nav-text">HTTP消息头分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通用头"><span class="nav-number">1.1.</span> <span class="nav-text">通用头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#请求头"><span class="nav-number">1.2.</span> <span class="nav-text">请求头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应头"><span class="nav-number">1.3.</span> <span class="nav-text">响应头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实体头"><span class="nav-number">1.4.</span> <span class="nav-text">实体头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#端到端（End-To-End）头"><span class="nav-number">1.5.</span> <span class="nav-text">端到端（End-To-End）头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逐跳（Hop-By-Hop）头"><span class="nav-number">1.6.</span> <span class="nav-text">逐跳（Hop-By-Hop）头</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些有用的请求头"><span class="nav-number">2.</span> <span class="nav-text">一些有用的请求头</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#控制所访问资源的语言"><span class="nav-number">2.1.</span> <span class="nav-text">控制所访问资源的语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有条件GET请求"><span class="nav-number">2.2.</span> <span class="nav-text">有条件GET请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些有用的响应头"><span class="nav-number">3.</span> <span class="nav-text">一些有用的响应头</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#框架（frame）控制"><span class="nav-number">3.1.</span> <span class="nav-text">框架（frame）控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据压缩"><span class="nav-number">3.2.</span> <span class="nav-text">数据压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存控制"><span class="nav-number">3.3.</span> <span class="nav-text">缓存控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置MIME类型"><span class="nav-number">3.4.</span> <span class="nav-text">设置MIME类型</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="author" itemprop="copyrightHolder">Qiming</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

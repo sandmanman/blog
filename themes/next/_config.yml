@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "HTML5,CSS3,前端开发,javascript,ES6,Vue"
+keywords: "HTML5,CSS3,javascript,ES6,Vue"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -241,7 +241,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night eighties
+highlight_theme: normal
 
 
 # ---------------------------------------------------------------
