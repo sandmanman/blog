@@ -18,6 +18,7 @@ type: "src"
 - [Effeckt.css - 动画库:modal,button,list,tab...](https://github.com/h5bp/Effeckt.css)
 - [Tridiv - Creating 3D shapes in CSS ](http://tridiv.com/)
 - [animate.css](https://github.com/daneden/animate.css)
+- [Animista](http://animista.net/)
 - [magic animations](http://www.minimamente.com/example/magic_animations/)
 - [Effeckt](http://h5bp.github.io/Effeckt.css/)
 - [Hover](https://github.com/IanLunn/Hover)
@@ -56,6 +57,7 @@ type: "src"
 - [Flexibility - 各属性在线演示](https://jonathantneal.github.io/flexibility/)
 - [flexplorer - 布局](http://bennettfeely.com/flexplorer/)
 - [Properties for the flex container - 各种示例](http://codepen.io/enxaneta/full/adLPwv/)
+- [Flex属性示例](http://yoksel.github.io/flex-cheatsheet/)
 
 
 **Components**
