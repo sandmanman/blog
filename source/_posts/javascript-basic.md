@@ -1,5 +1,5 @@
 ---
-title: JavaScript高级程序设计--数据类型
+title: JavaScript高级程序设计 -- 数据类型
 date: 2017-04-19 13:55:41
 categories: JavaScript高级程序设计
 tags: 数据类型
