@@ -1,25 +1,14 @@
 ---
-title: '[转载]ES5中数组Array.prototype方法的使用'
-date: 2017-03-08 16:08:57
+title: '[转载]数组Array.prototype方法的使用'
+date: 2017-07-20 23:19:57
 categories: javaScript日常笔记
 tags: array
 ---
 
-熟悉ES5中数组Array.prototype方法的使用
+熟悉数组Array.prototype方法的使用
 
-> 转载：[你还在用for循环大法麽？](https://shimo.im/doc/VXqv2bxTlOUiJJqO/)
+> 转载：[你还在用for循环大法麽](https://shimo.im/doc/VXqv2bxTlOUiJJqO/)  [常用数组方法](https://segmentfault.com/a/1190000002913698)
 
-```javascript
-Array.prototype.indexOf
-Array.prototype.lastIndexOf
-Array.prototype.every
-Array.prototype.some
-Array.prototype.forEach
-Array.prototype.map
-Array.prototype.filter
-Array.prototype.reduce
-Array.prototype.reduceRight
-```
 
 ## indexOf()
 
@@ -283,3 +272,161 @@ var ary4 = new Date();
 var res4 = Array.isArray(ary4);  // Output: false
 console.log(res4)
 ```
+
+## 数组的增加、删除和修改
+
+### push()
+
+向数组末尾增加新的内容，返回的是添加后新数组的长度,原有的数组改变了
+
+```javascript
+var arr = [10,11,12,13,14,15];
+var res = arr.push(16,17);
+console.log(res);    //8
+console.log(arr);    //[10,11,12,13,14,15,16,17]
+```
+
+
+### unshift()
+
+向数组的开头增加新的内容，返回的是添加后新数组的长度，原来的数组也改变
+
+```javascript
+var res = arr.unshift(16,17);
+console.log(res);   //8
+```
+
+### splice(n,m,x)
+
+把原有数组中的某些项进行替换。（先删除，然后用x替换）。从索引n（包含n）开始，向后删除m个元素，用x替换，返回删除的数组
+
+原有数组改变规律：
+
+`splice(0,0,x)` 相当于unshift，`splice(arr.length,0,x)` 相当于push，`splice(n,0,x)` 向数组中间某个位置添加新的内容，从索引n开始，删除0个内容，把新增的内容x放在索引n的前面。返回的是一个空数组，原有数组改变n开始的索引 `splice(n,m)` 删除数组指定项，从所以n（包含n）开始，向后删除m个元素 ，把删除的内容当做新数组返回，原有数组改变。
+
+```javascript
+var res = arr.splice(2,0,"michael");  //在12后面添加“michael"
+console.log(arr);
+```
+
+### pop()
+
+删除数组最后一个，返回的是删除的那一项，原有数组改变。
+
+### shift() 
+
+删除数组第一个，返回的是删除的那一项，原有数组改变。
+
+
+## 数组的查询和复制
+
+### slice(n,m)
+
+从索引 n（包含n）开始找到索引 m (不包含m)处。把找到的内容作为一个新的数组返回，原有数组是不改变的。
+
+```javascript
+var arr = [10,11,12,13,14,15];
+var res = arr.slice(1,4);
+console.log(res);   //[11, 12, 13]
+console.log(arr);   //[10, 11, 12, 13, 14, 15]
+slice(n)  // 从索引n（包含n）开始找到末尾
+slice(0)  // slice()  将原来数组原封不动的复制一份，数组clone
+```
+
+### concat()
+
+本意是实现数组的拼接的 `arr1.concat(arr2)` 将数组 arr2 和 arr1 合并成新的数组，原来的数组也不变。
+
+`concat` 也可以是数组的克隆，原来的数组也改变（相当于 `slice(0)`)。
+
+```javascript
+var arr1=[10,11,12,13,14,15];
+var arr2=[16,17];
+var res=arr1.concat(arr2);
+console.log(arr1);  //[10, 11, 12, 13, 14, 15]
+console.log(res);   //[10, 11, 12, 13, 14, 15, 16, 17]
+```
+
+## 将数组转化为需要的字符串
+
+### toString()
+
+把数组中的每一项拿出来，用逗号隔开，组成字符串，原有数组不变。
+
+```javascript
+var arr = ["name","michael","age","24"];
+var res = arr.toString();
+console.log(res);   //name,michael,age,24
+console.log(arr);   //["name", "michael", "age", "24"]
+```
+
+### join()
+
+把数组中的每一项拿出来，用指定的分隔符隔开，原有数组不变。
+
+```javascript
+var arr = ["name","michael","age","24"];
+var res = arr.join("|");
+console.log(res);           //"name|michael|age|24"
+console.log(res.length);    //19
+console.log(arr);           //["name", "michael", "age", "24"]
+console.log(arr.length);    //4
+```
+
+实现数组中数字的求和：
+
+```javascript
+var arr = [10,11,12,13,14,15];
+var str = arr.join("+");     //"10+11+12+13+14+15"
+var total = eval(str);       //eval 将指定的字符串变成真正的额表达式执行
+console.log(total);          //75
+console.log(arr);            //[10, 11, 12, 13, 14, 15]
+```
+
+## 排列和排序
+
+### reverse() 
+
+数组倒过来排列，原有数组改变。
+
+```javascript
+var arr = [10,11,12,13,14,15];
+console.log(arr);           //[10, 11, 12, 13, 14, 15]
+var res = arr.reverse();    //"10+11+12+13+14+15"
+console.log(res);           //[15, 14, 13, 12, 11, 10]
+```
+
+### sort()
+
+数组的排序，可以实现由大到小（由小到大），原有的数组也变。
+
+直接写 `sort` 只能处理10以内的数字排序,处理10以上的我们需要传递一个参数，这个参数必须是函数。
+
+```javascript
+var arr = [10,12,11,19,13,15,6];
+console.log(arr);           //[10, 12, 11, 19, 13, 15,6]
+var res = arr.sort();
+console.log(res);           //[10, 11, 12, 13, 15, 19, 6]
+```
+
+改进：
+
+```javascript
+var arr = [10,12,11,19,13,15,6];
+console.log(arr);           //[10, 12, 11, 19, 13, 15,6]
+var res1 = arr.sort(function(a,b){return a-b;});   //实现由小到大
+console.log(res1);
+var res2 = arr.sort(function(a,b){return b-a;})   //实现由大到小
+console.log(res2);          //[10, 11, 12, 13, 15, 19, 6]
+var arr = [10,12,11,19,13,6];
+console.log(arr);           //[10, 12, 11, 19, 13, 15,6]
+
+var res1 = arr.sort(function(a,b){
+//a表示每一次循环的时候的当前项，b是后面的项
+//return a-b;当前项减去后一项，如果大于0，代表前面的比后面的大，这样的话就交换位置
+//冒泡排序：sort实现排序，就是遵循冒泡排序的思想实现的
+console.log(a+"<====>"+b);
+return a-b;});   //实现由小到大
+```
+
+
