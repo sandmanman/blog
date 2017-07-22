@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 'Code.Design.Coffee'
-subtitle: '代码搬运工'
+title: 'Coding.Design.Cafe'
+subtitle: 'Let it be,it will be.'
 description:
 author: Qiming
 language: zh-Hans
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: cactus-dark
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

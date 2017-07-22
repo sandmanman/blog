@@ -1,356 +1,146 @@
-<!doctype html>
-
-
-
-
-<html class="theme-next muse" lang="zh-Hans">
+<!DOCTYPE html>
+<html lang=zh>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="http," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
-
-
-
-<meta name="description" content="转载：HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头
-
-HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：Content-Type: text/html 。通过HTTP消息头，可以使服务器或客户端了解对方所使用">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="转载：HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头  HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：Content-Type: text/html 。通过HTTP消息头，可以使服务器或客户端了解对方所使用">
+<meta name="keywords" content="http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头">
 <meta property="og:url" content="http://www.bestcsser.cc/2017/04/18/http-headers/index.html">
-<meta property="og:site_name" content="Code.Design.Coffee">
-<meta property="og:description" content="转载：HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头
-
-HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：Content-Type: text/html 。通过HTTP消息头，可以使服务器或客户端了解对方所使用">
+<meta property="og:site_name" content="Coding.Design.Cafe">
+<meta property="og:description" content="转载：HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头  HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：Content-Type: text/html 。通过HTTP消息头，可以使服务器或客户端了解对方所使用">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-04-23T05:51:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头">
-<meta name="twitter:description" content="转载：HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头
-
-HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：Content-Type: text/html 。通过HTTP消息头，可以使服务器或客户端了解对方所使用">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: false,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://www.bestcsser.cc/2017/04/18/http-headers/"/>
-
-
-
-
-
-  <title> [转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头 | Code.Design.Coffee </title>
+<meta name="twitter:description" content="转载：HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头  HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：Content-Type: text/html 。通过HTTP消息头，可以使服务器或客户端了解对方所使用">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-
-
-
-
-
-
-
-
-
-
-  
-  
+<body>
     
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta custom-logo">
-  
-    <div class="site-meta-headline">
-      <a>
-        <img class="custom-logo-image" src="/uploads/logo.png"
-             alt="Code.Design.Coffee"/>
-      </a>
-    </div>
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Code.Design.Coffee</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">代码搬运工</p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/src/">Src</a></li>
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-src">
-          <a href="/src" rel="section">
-            
-            资源
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.bestcsser.cc/2017/04/18/http-headers/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Qiming">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Code.Design.Coffee">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Code.Design.Coffee" src="/uploads/logo.png">
+      </ul>
     </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/04/19/javascript-basic/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2017/04/18/http-request-methods/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.bestcsser.cc/2017/04/18/http-headers/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.bestcsser.cc/2017/04/18/http-headers/&text=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.bestcsser.cc/2017/04/18/http-headers/&title=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.bestcsser.cc/2017/04/18/http-headers/&is_video=false&description=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头&body=Check out this article: http://www.bestcsser.cc/2017/04/18/http-headers/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.bestcsser.cc/2017/04/18/http-headers/&title=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.bestcsser.cc/2017/04/18/http-headers/&title=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.bestcsser.cc/2017/04/18/http-headers/&title=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.bestcsser.cc/2017/04/18/http-headers/&title=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.bestcsser.cc/2017/04/18/http-headers/&name=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP消息头分类"><span class="toc-number">1.</span> <span class="toc-text">HTTP消息头分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通用头"><span class="toc-number">1.1.</span> <span class="toc-text">通用头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#请求头"><span class="toc-number">1.2.</span> <span class="toc-text">请求头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#响应头"><span class="toc-number">1.3.</span> <span class="toc-text">响应头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实体头"><span class="toc-number">1.4.</span> <span class="toc-text">实体头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#端到端（End-To-End）头"><span class="toc-number">1.5.</span> <span class="toc-text">端到端（End-To-End）头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逐跳（Hop-By-Hop）头"><span class="toc-number">1.6.</span> <span class="toc-text">逐跳（Hop-By-Hop）头</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些有用的请求头"><span class="toc-number">2.</span> <span class="toc-text">一些有用的请求头</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#控制所访问资源的语言"><span class="toc-number">2.1.</span> <span class="toc-text">控制所访问资源的语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有条件GET请求"><span class="toc-number">2.2.</span> <span class="toc-text">有条件GET请求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些有用的响应头"><span class="toc-number">3.</span> <span class="toc-text">一些有用的响应头</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#框架（frame）控制"><span class="toc-number">3.1.</span> <span class="toc-text">框架（frame）控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据压缩"><span class="toc-number">3.2.</span> <span class="toc-text">数据压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缓存控制"><span class="toc-number">3.3.</span> <span class="toc-text">缓存控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置MIME类型"><span class="toc-number">3.4.</span> <span class="toc-text">设置MIME类型</span></a></li></ol></li></ol>
+    </div>
   </span>
+</div>
 
     
-      <header class="post-header">
-
+    <div class="content index width mx-auto px2 my4">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                [转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-18T11:16:55+08:00">
-                2017-04-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
     
+    <h1 class="posttitle" itemprop="name headline">
+        [转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头
+    </h1>
 
 
-    <div class="post-body" itemprop="articleBody">
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Coding.Design.Cafe</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-04-18T03:16:55.000Z" itemprop="datePublished">2017-04-18</time>
+    </div>
+
 
       
-      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/http/">http</a>
+    </div>
 
-      
-        <blockquote>
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <html><head></head><body><blockquote>
 <p>转载：<a href="https://itbilu.com/other/relate/E1T0q4EIe.html" target="_blank" rel="external">HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头</a></p>
 </blockquote>
 <p>HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体。通过HTTP头信息，使客户端请求服务器资源或服务器响应客户端请求时，可以传递额外的信息。HTTP头信息格式为名称:值，名称不区分大小写，如：<code>Content-Type: text/html</code> 。通过HTTP消息头，可以使服务器或客户端了解对方所使用的协议版本、内容类型、编码方式等。</p>
@@ -376,308 +166,103 @@ HTTP协议将传输的信息分隔为两部分：HTTP信息头、HTTP信息体�
 <p>配置缓存时，需要设置以下项：</p>
 <p>任何静态资源都应该提供了一个 <code>Expires</code> :响应头。这样，资源可以用户代理达到它自身限制前（如：达到缓存大小限制），充分的缓存数据。<br>任何动态资源都应该提供了一个 <code>Cache-control</code> :响应头。理论上讲，所有安全的HTTP方法(GET、HEAD)甚至幂等方法(DELETE、PUT)，都可以配置缓存，但在实际使用中会有一些问题。</p>
 <h3 id="设置MIME类型"><a href="#设置MIME类型" class="headerlink" title="设置MIME类型"></a>设置MIME类型</h3><p><code>MIME</code> 类型响应头 <code>Content-type</code> 会告诉客户端传输文档的类型，扩展名在文档的网络传中已经失去意义。正确配置服务器此项设置，对文件传输非常重要，用户代理客户端经常通过MIME类型判断文档的打开方式或获取资源后的默认动作。</p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/http/" rel="tag"># http</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/04/18/http-request-methods/" rel="next" title="[转载]HTTP请求方法：GET、HEAD、POST、PUT、DELETE、CONNECT、OPTIONS、TRACE">
-                <i class="fa fa-chevron-left"></i> [转载]HTTP请求方法：GET、HEAD、POST、PUT、DELETE、CONNECT、OPTIONS、TRACE
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/19/javascript-basic/" rel="prev" title="JavaScript高级程序设计 -- 数据类型">
-                JavaScript高级程序设计 -- 数据类型 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
+</body></html>
   </div>
+</article>
 
 
-          </div>
-          
 
-
-          
-  <div class="comments" id="comments">
+    </div>
     
-  </div>
+      <div id="footer-post-container">
+  <div id="footer-post">
 
-
-        </div>
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/src/">Src</a></li>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+      </ul>
     </div>
-  </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP消息头分类"><span class="toc-number">1.</span> <span class="toc-text">HTTP消息头分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通用头"><span class="toc-number">1.1.</span> <span class="toc-text">通用头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#请求头"><span class="toc-number">1.2.</span> <span class="toc-text">请求头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#响应头"><span class="toc-number">1.3.</span> <span class="toc-text">响应头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实体头"><span class="toc-number">1.4.</span> <span class="toc-text">实体头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#端到端（End-To-End）头"><span class="toc-number">1.5.</span> <span class="toc-text">端到端（End-To-End）头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逐跳（Hop-By-Hop）头"><span class="toc-number">1.6.</span> <span class="toc-text">逐跳（Hop-By-Hop）头</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些有用的请求头"><span class="toc-number">2.</span> <span class="toc-text">一些有用的请求头</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#控制所访问资源的语言"><span class="toc-number">2.1.</span> <span class="toc-text">控制所访问资源的语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有条件GET请求"><span class="toc-number">2.2.</span> <span class="toc-text">有条件GET请求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些有用的响应头"><span class="toc-number">3.</span> <span class="toc-text">一些有用的响应头</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#框架（frame）控制"><span class="toc-number">3.1.</span> <span class="toc-text">框架（frame）控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据压缩"><span class="toc-number">3.2.</span> <span class="toc-text">数据压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缓存控制"><span class="toc-number">3.3.</span> <span class="toc-text">缓存控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置MIME类型"><span class="toc-number">3.4.</span> <span class="toc-text">设置MIME类型</span></a></li></ol></li></ol>
+    </div>
 
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
-               alt="Qiming" />
-          <p class="site-author-name" itemprop="name">Qiming</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">10</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">7</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP消息头分类"><span class="nav-number">1.</span> <span class="nav-text">HTTP消息头分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通用头"><span class="nav-number">1.1.</span> <span class="nav-text">通用头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#请求头"><span class="nav-number">1.2.</span> <span class="nav-text">请求头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应头"><span class="nav-number">1.3.</span> <span class="nav-text">响应头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实体头"><span class="nav-number">1.4.</span> <span class="nav-text">实体头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#端到端（End-To-End）头"><span class="nav-number">1.5.</span> <span class="nav-text">端到端（End-To-End）头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逐跳（Hop-By-Hop）头"><span class="nav-number">1.6.</span> <span class="nav-text">逐跳（Hop-By-Hop）头</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些有用的请求头"><span class="nav-number">2.</span> <span class="nav-text">一些有用的请求头</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#控制所访问资源的语言"><span class="nav-number">2.1.</span> <span class="nav-text">控制所访问资源的语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有条件GET请求"><span class="nav-number">2.2.</span> <span class="nav-text">有条件GET请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些有用的响应头"><span class="nav-number">3.</span> <span class="nav-text">一些有用的响应头</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#框架（frame）控制"><span class="nav-number">3.1.</span> <span class="nav-text">框架（frame）控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据压缩"><span class="nav-number">3.2.</span> <span class="nav-text">数据压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存控制"><span class="nav-number">3.3.</span> <span class="nav-text">缓存控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置MIME类型"><span class="nav-number">3.4.</span> <span class="nav-text">设置MIME类型</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.bestcsser.cc/2017/04/18/http-headers/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.bestcsser.cc/2017/04/18/http-headers/&text=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.bestcsser.cc/2017/04/18/http-headers/&title=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.bestcsser.cc/2017/04/18/http-headers/&is_video=false&description=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头&body=Check out this article: http://www.bestcsser.cc/2017/04/18/http-headers/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.bestcsser.cc/2017/04/18/http-headers/&title=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.bestcsser.cc/2017/04/18/http-headers/&title=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.bestcsser.cc/2017/04/18/http-headers/&title=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.bestcsser.cc/2017/04/18/http-headers/&title=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.bestcsser.cc/2017/04/18/http-headers/&name=[转载]HTTP消息头（HTTP headers）－HTTP请求头与HTTP响应头&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
 
     </div>
-  </aside>
 
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="author" itemprop="copyrightHolder">Qiming</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
     </div>
+
   </div>
+</div>
 
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-	
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Qiming
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/src/">Src</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
 
 </body>
 </html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
