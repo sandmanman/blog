@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="写在前面最近在折腾 vue 的时候，关于 vue-router，发现当切换不同页面的时候页面 title 是不会更新的。随后去找官方的文档，发现没有直接的方法来做这件事件，倒是有个路由元信息 meta，通过这个方法可以事先定义好路由的一些信息比如文档中的例子： 12345678910111213141516const router = new VueRouter({  routes: [    {">
+<meta name="keywords" content="vue,vue-router">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VueRouter动态更新页面title">
+<meta property="og:url" content="http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/index.html">
+<meta property="og:site_name" content="Coding.Design.Cafe">
+<meta property="og:description" content="写在前面最近在折腾 vue 的时候，关于 vue-router，发现当切换不同页面的时候页面 title 是不会更新的。随后去找官方的文档，发现没有直接的方法来做这件事件，倒是有个路由元信息 meta，通过这个方法可以事先定义好路由的一些信息比如文档中的例子： 12345678910111213141516const router = new VueRouter({  routes: [    {">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-27T04:15:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VueRouter动态更新页面title">
+<meta name="twitter:description" content="写在前面最近在折腾 vue 的时候，关于 vue-router，发现当切换不同页面的时候页面 title 是不会更新的。随后去找官方的文档，发现没有直接的方法来做这件事件，倒是有个路由元信息 meta，通过这个方法可以事先定义好路由的一些信息比如文档中的例子： 12345678910111213141516const router = new VueRouter({  routes: [    {">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>VueRouter动态更新页面title</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/src/">Src</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/07/23/es6tutorial-promise/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&text=VueRouter动态更新页面title"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&title=VueRouter动态更新页面title"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&is_video=false&description=VueRouter动态更新页面title"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=VueRouter动态更新页面title&body=Check out this article: http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&title=VueRouter动态更新页面title"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&title=VueRouter动态更新页面title"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&title=VueRouter动态更新页面title"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&title=VueRouter动态更新页面title"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&name=VueRouter动态更新页面title&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过程"><span class="toc-number">2.</span> <span class="toc-text">过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">3.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一点点思考"><span class="toc-number">4.</span> <span class="toc-text">一点点思考</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        VueRouter动态更新页面title
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Coding.Design.Cafe</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-07-27T03:24:41.000Z" itemprop="datePublished">2017-07-27</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/vue/">vue</a>, <a class="tag-link" href="/tags/vue-router/">vue-router</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <html><head></head><body><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>最近在折腾 <code>vue</code> 的时候，关于 <code>vue-router</code>，发现当切换不同页面的时候页面 <code>title</code> 是不会更新的。随后去找官方的文档，发现没有直接的方法来做这件事件，倒是有个<a href="https://router.vuejs.org/zh-cn/advanced/meta.html" target="_blank" rel="external">路由元信息</a> <code>meta</code>，通过这个方法可以事先定义好路由的一些信息比如文档中的例子：</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter({</div><div class="line">  <span class="attr">routes</span>: [</div><div class="line">    {</div><div class="line">      <span class="attr">path</span>: <span class="string">'/foo'</span>,</div><div class="line">      <span class="attr">component</span>: Foo,</div><div class="line">      <span class="attr">children</span>: [</div><div class="line">        {</div><div class="line">          <span class="attr">path</span>: <span class="string">'bar'</span>,</div><div class="line">          <span class="attr">component</span>: Bar,</div><div class="line">          <span class="comment">// a meta field</span></div><div class="line">          meta: { <span class="attr">requiresAuth</span>: <span class="literal">true</span> }</div><div class="line">        }</div><div class="line">      ]</div><div class="line">    }</div><div class="line">  ]</div><div class="line">})</div></pre></td></tr></tbody></table></figure>
+<p>这样的话也可以定义各页面的 <code>title: '登录'</code>，如何取到 <code>meta</code> 中的数据，下面是文档中的例子：</p>
+<blockquote>
+<p>那么如何访问这个 meta 字段呢？<br>首先，我们称呼 routes 配置中的每个路由对象为 路由记录。路由记录可以是嵌套的，因此，当一个路由匹配成功后，他可能匹配多个路由记录<br>例如，根据上面的路由配置，/foo/bar 这个 URL 将会匹配父路由记录以及子路由记录。<br>一个路由匹配到的所有路由记录会暴露为 $route 对象（还有在导航钩子中的 route 对象）的 $route.matched 数组。因此，我们需要遍历 $route.matched 来检查路由记录中的 meta 字段。<br>下面例子展示在全局导航钩子中检查 meta 字段：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =></span> {</div><div class="line">  <span class="keyword">if</span> (to.matched.some(<span class="function"><span class="params">record</span> =></span> record.meta.requiresAuth)) {</div><div class="line">    <span class="comment">// this route requires auth, check if logged in</span></div><div class="line">    <span class="comment">// if not, redirect to login page.</span></div><div class="line">    <span class="keyword">if</span> (!auth.loggedIn()) {</div><div class="line">      next({</div><div class="line">        <span class="attr">path</span>: <span class="string">'/login'</span>,</div><div class="line">        <span class="attr">query</span>: { <span class="attr">redirect</span>: to.fullPath }</div><div class="line">      })</div><div class="line">    } <span class="keyword">else</span> {</div><div class="line">      next()</div><div class="line">    }</div><div class="line">  } <span class="keyword">else</span> {</div><div class="line">    next() <span class="comment">// 确保一定要调用 next()</span></div><div class="line">  }</div><div class="line">})</div></pre></td></tr></tbody></table></figure>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p><code>meta</code> 中的数据取到后，该如何更新到 <code>title</code>， <code>document.title = ...</code>？</p>
+<p>通过搜索发现有人觉得把事先定义好的 <code>title</code> 保存在 <code>vuex</code> 中，在页面切换的时候去获取 <code>store</code> 中的 <code>title</code>。但是这个方法有点 “大材小用的感觉”，不喜欢。</p>
+<p>然后找到 github vue-router Issues <a href="https://github.com/vuejs/vue-router/issues/112" target="_blank" rel="external">https://github.com/vuejs/vue-router/issues/112</a> 中的讨论。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p><a href="https://github.com/roninliu" target="_blank" rel="external">@roninliu</a>给到的方法：</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//in router config</span></div><div class="line">{</div><div class="line">    <span class="attr">path</span>: <span class="string">"/login"</span>,</div><div class="line">    <span class="attr">name</span>: <span class="string">"login"</span>,</div><div class="line">    <span class="attr">component</span>: LoginView,</div><div class="line">    <span class="attr">meta</span>: {</div><div class="line">        <span class="attr">title</span>: <span class="string">'Login System'</span></div><div class="line">    }</div><div class="line"></div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">//in init router file</span></div><div class="line">router.afterEach(<span class="function"><span class="params">route</span> =></span> {</div><div class="line">    <span class="built_in">document</span>.title = route.meta.title;</div><div class="line">})</div></pre></td></tr></tbody></table></figure>
+<h2 id="一点点思考"><a href="#一点点思考" class="headerlink" title="一点点思考"></a>一点点思考</h2><p>最近一直在熟悉vue的开发，给我的感觉也是简单易上手，虽然自己的javaScript基础相对弱，还好在遇到问题的时候通过搜索能够解决难题，这就是互联网共享的价值吧。</p>
+<p>同时也一直在看一些前端开发相关的文章，还是发现各种工具框架层出不穷，感觉过不了个把月可能当下你用的工具就过时了，不如 <code>npm</code>，现在的 <code>yarn</code> ……</p>
+<p>作为前端开发，有时也觉得各位大神究竟在折腾个啥呢。</p>
+<p>最后，基础是一切之根基。在折腾各种框架工具的同时还是要时刻提升自己的基础知识。</p>
+<blockquote>
+<p>路漫漫其修远兮</p>
+</blockquote>
+</body></html>
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/src/">Src</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过程"><span class="toc-number">2.</span> <span class="toc-text">过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">3.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一点点思考"><span class="toc-number">4.</span> <span class="toc-text">一点点思考</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&text=VueRouter动态更新页面title"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&title=VueRouter动态更新页面title"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&is_video=false&description=VueRouter动态更新页面title"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=VueRouter动态更新页面title&body=Check out this article: http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&title=VueRouter动态更新页面title"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&title=VueRouter动态更新页面title"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&title=VueRouter动态更新页面title"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&title=VueRouter动态更新页面title"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.bestcsser.cc/2017/07/27/vue-router-updating-document-title/&name=VueRouter动态更新页面title&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Qiming
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/src/">Src</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+

@@ -98,6 +98,11 @@ type: "src"
 - [GridList - Drag and drop library for two-dimensional, resizable and responsive lists](https://github.com/hootsuite/grid)
 - [Notie - a clean and simple notification, input, and selection suite for javascript](https://github.com/jaredreich/notie)
 - [Slick - 轮播支持PC和Mobile](https://github.com/kenwheeler/slick/)
+- [SmallPop](http://silvio-r.github.io/spop/)
+- [Split.js - 可拖动的布局](http://nathancahill.github.io/Split.js/)
+- [LazyLoad](https://github.com/verlok/lazyload)
+- [justlazy.js - micro javascript image lazy loading library](justlazy.js)
+- [tingle.js - A minimalist and easy-to-use modal plugin written in pure JavaScript](http://robinparisi.github.io/tingle/)
 
 
 ## Animate javaScript/CSS3
